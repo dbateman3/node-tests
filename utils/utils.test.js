@@ -12,6 +12,14 @@ it('should add two numbers', function() {
 	//}
 });
 
+//done tells mocha its an async test, call after assertions
+it('should async add 2 numbers', function(done) {
+	utils.asyncAdd(4, 3, function(sum) {
+		expect(sum).toBeA('number').toBe(7);
+		done();
+	})
+});
+
 it('should square a number', function() {
 	let res = utils.square(2);
 	
@@ -21,6 +29,13 @@ it('should square a number', function() {
 	//	throw new Error(`Incorrect answer, expected 2, got ${res}`);
 	//}
 });
+
+it('should async square a number', function(done) {
+	utils.asyncSquare(2, function(product) {
+		expect(product).toBeA('number').toBe(4);
+		done();
+	})
+})
 
 it('should expect some values', function() {
 	//expect(12).toNotBe(11);
