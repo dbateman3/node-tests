@@ -1,6 +1,8 @@
 const expect = require('expect');
 const utils = require('./utils');
-//test case runs code checks for passed/failed behavior driven development
+
+describe('Utils', function() {
+	//test case runs code checks for passed/failed behavior driven development
 //it is a function from mocha, no imports
 //2 arguments, string description
 it('should add two numbers', function() {
@@ -61,4 +63,5 @@ it('should set first and last name properties', function() {
 		firstName: 'Dan',
 		lastName: 'Bateman'
 	});
+});
 });
